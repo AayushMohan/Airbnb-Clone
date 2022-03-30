@@ -17,9 +17,13 @@ const Header = () => {
       </div>
 
       {/* Middle - Search */}
-      <div className="flex items-center rounded-full border-2">
-        <input type="text" placeholder="Start your search" />
-        <SearchIcon className="h-8 cursor-pointer rounded-full bg-red-400 p-2 text-white" />
+      <div className="flex items-center rounded-full py-2 md:border-2 md:shadow-sm">
+        <input
+          className="flex-grow bg-transparent pl-5 text-sm text-gray-600 placeholder-gray-400 outline-none"
+          type="text"
+          placeholder="Start your search"
+        />
+        <SearchIcon className="hidden h-8 cursor-pointer rounded-full bg-red-400 p-2 text-white md:mx-2 md:inline-flex" />
       </div>
 
       {/* Right */}
