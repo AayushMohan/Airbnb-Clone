@@ -14,6 +14,12 @@ const Home: NextPage = () => {
 
       <Header />
       <Banner />
+
+      <main className="mx-auto max-w-7xl px-8 sm:px-16">
+        <section className="pt-6">
+          <h2 className="pb-5 text-4xl font-semibold">Explore Nearby</h2>
+        </section>
+      </main>
     </div>
   )
 }
