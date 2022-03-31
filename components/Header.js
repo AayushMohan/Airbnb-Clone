@@ -91,7 +91,7 @@ const Header = () => {
             />
           </div>
           <div className="flex">
-            <button onClick={resetInput} className="text-gray flex-grow-500">
+            <button onClick={resetInput} className="text-gray flex-grow">
               Cancel
             </button>
             <button className="flex-grow text-red-400">Search</button>
