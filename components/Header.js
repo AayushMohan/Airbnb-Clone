@@ -15,6 +15,7 @@ const Header = () => {
   const [searchInput, setSearchInput] = useState('')
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
+  const [noOfGuests, setNoOfGuests] = useState(1)
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate)
@@ -71,6 +72,20 @@ const Header = () => {
             rangeColors={['#FD5B61']}
             onChange={handleSelect}
           />
+          <div className="mb-4 flex items-center border-b">
+            <h2 className="flex-grow text-2xl font-semibold">
+              Number of Guests
+            </h2>
+
+            <UsersIcon className="h-5" />
+            <input
+              value={noOfGuests}
+              onChange={(e) => setNoOfGuests(e.target.value)}
+              min={1}
+              type="number"
+              className="w-12 pl-2 text-lg text-red-400 outline-none"
+            />
+          </div>
         </div>
       )}
     </header>
