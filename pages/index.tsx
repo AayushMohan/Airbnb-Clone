@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
+import SmallCard from '../components/SmallCard'
 
 function Home({ exploreData }) {
   return (
@@ -20,7 +21,12 @@ function Home({ exploreData }) {
 
           {/* Pull some data from a server - API endpoints */}
           {exploreData?.map((item: any) => (
-            <h1>{item.location}</h1>
+            <SmallCard
+              key={item.img}
+              img={item.img}
+              location={item.location}
+              distance={item.distance}
+            />
           ))}
         </section>
       </main>
