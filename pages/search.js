@@ -9,13 +9,13 @@ const Search = () => {
 
   const { location, startDate, endDate, noOfGuests } = router.query
 
-  const formattedStartDate = format(new Date(startDate), 'dd MMMM yy')
-  const formattedEndDate = format(new Date(endDate), 'dd MMMM yy')
+  const formattedStartDate = format(new Date(startDate), 'dd-MM-yy')
+  const formattedEndDate = format(new Date(endDate), 'dd-MM-yy')
   const range = `${formattedStartDate} - ${formattedEndDate}`
 
   return (
     <div className="h-screen">
-      <Header />
+      <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
 
       <main className="flex">
         <section className="flex-grow px-6 pt-14">
