@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../components/Banner'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import Footer from '../components/Footer.js'
+import Header from '../components/Header.js'
 import LargeCard from '../components/LargeCard'
 import MediumCard from '../components/MediumCard'
 import SmallCard from '../components/SmallCard'
@@ -24,7 +24,7 @@ function Home({ exploreData, cardsData }) {
 
           {/* Pull some data from a server - API endpoints */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {exploreData?.map((item: any) => (
+            {exploreData?.map((item) => (
               <SmallCard
                 key={item.img}
                 img={item.img}
@@ -39,7 +39,7 @@ function Home({ exploreData, cardsData }) {
           <h2 className="py-8 text-4xl font-semibold">Live Anywhere</h2>
 
           <div className="-ml-3 flex space-x-3 overflow-scroll p-3 scrollbar-hide">
-            {cardsData?.map((item: any) => (
+            {cardsData?.map((item) => (
               <MediumCard key={item.img} img={item.img} title={item.title} />
             ))}
           </div>
