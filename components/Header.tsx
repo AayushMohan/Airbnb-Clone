@@ -29,7 +29,7 @@ const Header = () => {
           type="text"
           placeholder="Start your search"
         />
-        <SearchIcon className="hidden h-8 cursor-pointer rounded-full bg-red-400 p-2 text-white md:mx-2 md:inline-flex" />
+        <SearchIcon className="hidden h-8 cursor-pointer rounded-full bg-[#ff385c] p-2 text-white md:mx-2 md:inline-flex" />
       </div>
 
       {/* Right */}
