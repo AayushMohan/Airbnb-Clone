@@ -72,6 +72,6 @@ export async function getStaticProps() {
   )
 
   return {
-    props: { exploreData: exploreData, cardsData },
+    props: { exploreData, cardsData },
   }
 }
