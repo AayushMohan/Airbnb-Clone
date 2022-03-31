@@ -20,14 +20,16 @@ function Home({ exploreData }) {
           <h2 className="pb-5 text-4xl font-semibold">Explore Nearby</h2>
 
           {/* Pull some data from a server - API endpoints */}
-          {exploreData?.map((item: any) => (
-            <SmallCard
-              key={item.img}
-              img={item.img}
-              location={item.location}
-              distance={item.distance}
-            />
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreData?.map((item: any) => (
+              <SmallCard
+                key={item.img}
+                img={item.img}
+                location={item.location}
+                distance={item.distance}
+              />
+            ))}
+          </div>
         </section>
       </main>
     </div>
