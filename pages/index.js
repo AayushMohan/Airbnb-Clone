@@ -26,6 +26,7 @@ function Home({ exploreData, cardsData }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {exploreData?.map((item) => (
               <SmallCard
+                priority
                 key={item.img}
                 img={item.img}
                 location={item.location}
@@ -40,13 +41,19 @@ function Home({ exploreData, cardsData }) {
 
           <div className="-ml-3 flex space-x-3 overflow-scroll p-3 scrollbar-hide">
             {cardsData?.map((item) => (
-              <MediumCard key={item.img} img={item.img} title={item.title} />
+              <MediumCard
+                key={item.img}
+                priority
+                img={item.img}
+                title={item.title}
+              />
             ))}
           </div>
         </section>
 
         <section>
           <LargeCard
+            priority
             img="https://links.papareact.com/4cj"
             title="The Greatest Outdoors"
             description="Wishlists curated by Airbnb"

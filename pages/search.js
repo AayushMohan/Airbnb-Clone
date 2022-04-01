@@ -38,6 +38,7 @@ const Search = ({ searchResults }) => {
             {searchResults.map(
               ({ img, location, title, description, star, price, total }) => (
                 <InfoCard
+                  priority
                   key={img}
                   img={img}
                   location={location}
