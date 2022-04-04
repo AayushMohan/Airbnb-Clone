@@ -36,7 +36,7 @@ const Search = ({ searchResults }) => {
           </div>
 
           <div className="flex flex-col">
-            {searchResults.map(
+            {searchResults?.map(
               ({ img, location, title, description, star, price, total }) => (
                 <InfoCard
                   priority
